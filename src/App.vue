@@ -38,24 +38,24 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <SimpleDiagram/>
     </v-content>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import SimpleDiagram from "@/components/SimpleDiagram.vue"
 
-export default Vue.extend({
-  name: 'App',
+import { Component } from "vue-property-decorator"
 
+
+@Component({
   components: {
-    HelloWorld,
-  },
+    SimpleDiagram
+  }
+})
+export default class App extends Vue {
 
-  data: () => ({
-    //
-  }),
-});
+}
 </script>
